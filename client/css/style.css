@@ -1,0 +1,232 @@
+/* Couleur de fond pour toute la page */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+/* Style pour la section de tri, recherche et ajout avec une couleur plus vive */
+.d-flex.justify-content-between {
+    background-color: #0288d1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    color: #333;
+}
+
+/* Bouton Ajouter avec une taille réduite */
+.btn-ajouter {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border : none;
+}
+
+.bi-plus-circle {
+    font-size: 1.5rem;
+}
+
+/* Ajustement des select et du champ de recherche pour s'harmoniser */
+.form-select,
+.input-group-text,
+#recherche {
+    background-color: #ffffff;
+    /* Fond blanc pour contraste avec le bleu */
+    border: 1px solid #0288d1;
+    /* Bordure bleue harmonisée */
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Pour des cards horizontales */
+
+.card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-horizontal img {
+    width: 100px;
+    height: auto; /* Conserver le ratio */
+}
+
+.card-body {
+    flex: 1;
+    margin-left: 15px;
+    padding: 0px;
+}
+
+.card-body h5 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.card-body p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+/* Couleur de fond pour le conteneur des cards */
+#container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    /* Réduire l'espacement entre les boutons */
+    align-items: center;
+}
+
+/* Réduire la taille des icônes à 1rem et rendre les boutons plus compacts */
+.btn-modifier,
+.btn-supprimer {
+    font-size: 1rem;
+    padding: 3px;
+    display: none;
+}
+
+.btn-outline-primary, .btn-outline-danger {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.btn-outline-danger {
+    margin-right : 10px;
+}
+
+/* Moderniser les select */
+.form-select {
+    border-radius: 8px;
+    /* Coins arrondis pour un style plus moderne */
+    border: 1px solid #46b8da;
+    /* Bordure bleu clair pour unifier avec le bouton Ajouter */
+    padding: 8px;
+    /* Ajout de padding pour plus de confort */
+    background-color: #f1f1f1;
+    /* Couleur de fond plus douce */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Légère ombre pour un effet 3D */
+    transition: background-color 0.3s ease;
+    /* Transition douce pour le hover */
+}
+
+/* Effet au survol (hover) */
+.form-select:hover {
+    background-color: #e0f7fa;
+    /* Fond bleu très clair au survol */
+}
+
+/* Couleur du texte de l'option sélectionnée */
+.form-select option {
+    color: #333;
+    /* Couleur du texte des options */
+}
+
+.titre {
+    color:blue;
+}
+
+.pagination {
+    margin-top: 15px;
+}
+
+.pagination button {
+    cursor: pointer;
+    font-size: 0.9rem;
+    /* Taille réduite des boutons */
+    padding: 5px 10px;
+    /* Rendre les boutons plus compacts */
+    margin-right: 5px;
+    background-color: #fff;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination span {
+    font-size: 1rem;
+    padding: 5px 10px;
+}
+
+/* Alternance de la couleur des cards */
+.bg-alternate-light {
+    background-color: #f8f9fa;
+    /* Gris très clair */
+}
+
+.bg-alternate-white {
+    background-color: #ffffff;
+    /* Blanc */
+}
+
+/* Positionner le toast en haut au centre de l'écran */
+.toast-container {
+    z-index: 1100;
+}
+
+/* Assurer que le toast-body ne cache pas son contenu */
+.toast-body {
+    overflow: visible;
+    /* Permet d'afficher tout le contenu */
+    white-space: normal;
+    /* Permet aux lignes de se dérouler normalement */
+    min-height: 100px;
+    /* Augmente la hauteur minimale du toast si nécessaire */
+}
+
+/* Styles pour les boutons à l'intérieur du toast */
+#btnConfirmer,
+#btnAnnuler {
+    margin-top: 10px;
+    /* Ajoute de l'espace au-dessus des boutons pour les rendre visibles */
+    display: inline-block;
+}
+
+.admin-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.btnDeconnexion{
+    /* background-color: red; */
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border : none;
+    float: right;
+    margin-top : 10px;
+    margin-right: 5%;
+}
+
+.btn-droite{
+    float: right;
+    margin-right: 1%;
+    cursor: pointer;
+}
+h3{
+    font-size: 1rem;
+    color: gray;
+    margin-left: 10px;
+    color: white !important;
+    cursor: pointer;
+}

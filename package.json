@@ -1,0 +1,16 @@
+{
+  "name": "solution_projet_cocktails",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "go": "node serveur/serveur.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Travail sur les cocktails stockés dans un fichier JSON",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}

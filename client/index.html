@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Cocktails</title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="utilitaires/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="utilitaires/bootstrap-icons-1.8.1/bootstrap-icons.min.css">
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Gestion des Cocktails</h1>
+
+        <!-- Bouton pour ajouter un nouveau cocktail -->
+        <div class="mb-3 text-end">
+            <button class="btn btn-primary" id="btnAjouter">
+                <i class="bi bi-plus-circle"></i> Ajouter un Cocktail
+            </button>
+        </div>
+
+        <!-- Conteneur pour afficher les cocktails -->
+        <div id="container_cocktails" class="row"></div>
+
+        <!-- Pagination -->
+        <nav aria-label="Pagination des cocktails" class="d-flex justify-content-end">
+            <ul class="pagination" id="pagination"></ul>
+        </nav>
+    </div>
+
+    <!-- Modal pour ajouter/modifier des cocktails -->
+    <div class="modal fade" id="modal_ajouter" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- Titre de la modale -->
+                    <h5 class="modal-title" id="modalLabel">Ajouter</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulaire pour ajouter/modifier un cocktail -->
+                    <form id="formulaire">
+                        <input type="hidden" id="id"> <!-- Champ caché pour stocker l'ID du cocktail -->
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" class="form-control" id="nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="type" class="form-label">Type</label>
+                            <input type="text" class="form-control" id="type" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="ingredients" class="form-label">Ingrédients (séparés par virgule)</label>
+                            <input type="text" class="form-control" id="ingredients" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prix" class="form-label">Prix (en $)</label>
+                            <input type="number" class="form-control" id="prix" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">URL de l'image du cocktail</label>
+                            <input type="text" class="form-control" id="image" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast pour afficher les messages -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1100;">
+        <div id="toastMessage" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong id="toastTitle" class="me-auto">Notification</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <!-- Contenu du message -->
+                <div id="messageContent" class="mb-2"></div>
+                <!-- Boutons de confirmation -->
+                <div class="mt-2">
+                    <button id="btnConfirmer" class="btn btn-danger btn-sm me-2" style="display: none;">Confirmer</button>
+                    <button id="btnAnnuler" class="btn btn-secondary btn-sm" style="display: none;">Annuler</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery et Bootstrap JS -->
+    <script src="utilitaires/jquery-3.7.1.min.js"></script>
+    <script src="utilitaires/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script principal JS -->
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
